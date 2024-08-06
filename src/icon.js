@@ -11,6 +11,7 @@ import snow from './icons/snow.png';
 import sunny from './icons/sun.png';
 import thermometer from './icons/thermometer.png';
 import wind from './icons/wind (2).png';
+import everything from './icons/cloudy (1).png';
 
 function getIcon(icon) {
   const getIcon = camelCase(icon);
@@ -34,7 +35,11 @@ function getIcon(icon) {
     getIcon == 'rain' ||
     getIcon == 'lightRain' ||
     getIcon == 'heavyRain' ||
-    getIcon == 'patchyRainNearby'
+    getIcon == 'patchyRainNearby' ||
+    getIcon == 'patchyLightRain' ||
+    getIcon == 'lightRainShower' ||
+    getIcon == 'moderateOrHeavyRainShower' ||
+    getIcon == 'lightDrizzle'
   )
     return raining;
   if (getIcon == 'snow' || getIcon == 'lightSnow' || getIcon == 'heavySnow')
@@ -42,6 +47,9 @@ function getIcon(icon) {
   if (getIcon == 'sunny' || getIcon == 'clear') return sunny;
   if (getIcon == 'thermometer') return thermometer;
   if (getIcon == 'wind') return wind;
+  else {
+    return everything;
+  }
 }
 
 export default getIcon;
