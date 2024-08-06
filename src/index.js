@@ -1,5 +1,5 @@
 import './styles/style.css';
-import getWeather from './weather.js';
+import weatherfunctions from './weather.js';
 import clear from './clear.js';
 import bottomindex from './bottomindex.js';
 
@@ -25,14 +25,14 @@ toggle.onclick = function () {
     temp = false;
     console.log(val);
     clear();
-    getWeather(val, temp);
+    weatherfunctions.getWeather(val, temp);
     bottomindex(val, temp);
   } else {
     console.log('fourth run');
     temp = true;
     console.log(val);
     clear();
-    getWeather(val, temp);
+    weatherfunctions.getWeather(val, temp);
     bottomindex(val, temp);
   }
 };
@@ -46,7 +46,7 @@ search.addEventListener('keyup', (event) => {
       return;
     }
     console.log(val);
-    getWeather(val, temp);
+    weatherfunctions.getWeather(val, temp);
     bottomindex(val, temp);
   }
 });

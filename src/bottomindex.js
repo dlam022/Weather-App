@@ -1,4 +1,4 @@
-import getHour from './weather.js';
+import weatherfunctions from './weather.js';
 
 const bottomData = document.querySelector('.data-extra');
 let counter = 1;
@@ -19,7 +19,7 @@ function bottomindex(data, temp) {
       counter = 1;
     } else {
       counter--;
-      getHour(data, temp, counter);
+      weatherfunctions.getHour(data, temp, counter);
     }
     console.log(counter);
   });
@@ -28,7 +28,7 @@ function bottomindex(data, temp) {
       counter = 3;
     } else {
       counter++;
-      getHour(data, temp, counter);
+      weatherfunctions.getHour(data, temp, counter);
     }
     console.log(counter);
   });
@@ -36,7 +36,7 @@ function bottomindex(data, temp) {
   switchData.appendChild(leftArrow);
   switchData.appendChild(rightArrow);
   bottomData.appendChild(switchData);
-  getHour(data, temp, counter);
+  weatherfunctions.getHour(data, temp, counter);
 }
 
 export default bottomindex;

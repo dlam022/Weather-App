@@ -115,7 +115,7 @@ h1 {
 }
 
 .data {
-  color: #e0e0e0;
+  color: white;
   /* border: 1px solid white; */
   width: 100%;
   /* position: relative;
@@ -127,8 +127,8 @@ h1 {
 }
 
 #condpic {
-  width: 15%;
-  height: 30%;
+  width: 100px;
+  height: 100px;
 }
 
 .location {
